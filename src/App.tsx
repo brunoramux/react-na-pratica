@@ -38,7 +38,6 @@ export function App() {
     queryFn: async () => {
       const response = await fetch(`http://localhost:3333/tags?_page=${page}&_per_page=10&title=${urlFilter}`)
       const data = await response.json()
-
       // delay 2s
       await new Promise(resolve => setTimeout(resolve, 2000))
 
